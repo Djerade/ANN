@@ -1,5 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// importer  'react-native-reanimated'
 import { useState, useEffect } from "react";
 import SplashScreen from "./screens/splash";
 import Home from "./screens/home";
