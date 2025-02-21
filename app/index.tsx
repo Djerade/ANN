@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import SplashScreen from "./screens/splash";
 import Home from "./screens/home";
 import React from "react";
+import Result from "./screens/result";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +15,8 @@ export default function App() {
     // Simulate loading process
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Adjust the time as needed
+    }, 3000); // Adjust the time as needed
   }, []);
-
-  return <>{isLoading ? <SplashScreen /> : <Home />}</>;
+  return <Result />;
+  // return <>{isLoading ? <SplashScreen /> : <Home />}</>;
 }
