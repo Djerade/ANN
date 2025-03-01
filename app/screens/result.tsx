@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const Result = () => {
   return (
     <SafeAreaView>
-      <Text>Result</Text>
+      <Text>Reezezult</Text>
     </SafeAreaView>
   );
 };
