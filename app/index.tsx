@@ -6,6 +6,7 @@ import SplashScreen from "./screens/splash";
 import Home from "./screens/home";
 import React from "react";
 import Result from "./screens/result";
+import Camera from "@/components/camera";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,6 @@ export default function App() {
       setIsLoading(false);
     }, 3000); // Adjust the time as needed
   }, []);
-  return <Result />;
+  return <Camera />;
   // return <>{isLoading ? <SplashScreen /> : <Home />}</>;
 }
