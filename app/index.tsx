@@ -1,15 +1,23 @@
-import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// importer  'react-native-reanimated'
+import { useState, useEffect } from "react";
+import SplashScreen from "./screens/splash";
+import Home from "./screens/home";
+import React from "react";
+import Result from "./screens/result";
+import Camera from "@/components/camera";
 
-export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Simulate loading process
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Adjust the time as needed
+  }, []);
+  return <Camera />;
+  // return <>{isLoading ? <SplashScreen /> : <Home />}</>;
 }
